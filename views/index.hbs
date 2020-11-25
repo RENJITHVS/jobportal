@@ -15,45 +15,583 @@
 
 
 <body>
+    <div class="container-fluid">
+        <header>
 
-    <header>
-        <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">JOB's hERE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+            <nav class="mt-3 navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">JOB's hERE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">NEW Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Category</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Contact Us!</a>
+                                <a class="dropdown-item" href="#">FaQ</a>
+                                <a class="dropdown-item" href="#">Write an Issue</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="d-inline align-self-end ml-auto">
+                        <ul>
+                            <button type="button" class="btn btn-primary btn-success"> Post New job </button>
+
+                            <button type="button" class="btn mt -2 btn-primary btn-success"> Log IN </button>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container-fluid">
+            <section>
+                <div class="row">
+                    <div class="col-lg-12 card-margin">
+                        <div class="card search-form">
+                            <div class="card-body p-0">
+                                <form id="search-form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>Location</option>
+                                                        <option>London</option>
+                                                        <option>Boston</option>
+                                                        <option>Mumbai</option>
+                                                        <option>New York</option>
+                                                        <option>Toronto</option>
+                                                        <option>Paris</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                                    <input type="text" placeholder="Search..." class="form-control"
+                                                        id="search" name="search">
+                                                </div>
+                                                <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                                    <button type="submit" class="btn btn-base">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="feather feather-search">
+                                                            <circle cx="11" cy="11" r="8"></circle>
+                                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-margin">
+                            <div class="card-body">
+                                <div class="row search-body">
+                                    <div class="col-lg-12">
+                                        <div class="search-result">
+                                            <div class="result-header">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="records">Showing: <b>1-20</b> of <b>200</b> result
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="result-actions">
+                                                            <div class="result-sorting">
+                                                                <span>Sort By:</span>
+                                                                <select class="form-control border-0"
+                                                                    id="exampleOption">
+                                                                    <option value="1">Relevance</option>
+                                                                    <option value="2">Names (A-Z)</option>
+                                                                    <option value="3">Names (Z-A)</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="result-views">
+                                                                <button type="button"
+                                                                    class="btn btn-soft-base btn-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-list">
+                                                                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                                        <line x1="3" y1="6" x2="3" y2="6"></line>
+                                                                        <line x1="3" y1="12" x2="3" y2="12"></line>
+                                                                        <line x1="3" y1="18" x2="3" y2="18"></line>
+                                                                    </svg>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="btn btn-soft-base btn-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-grid">
+                                                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result-body">
+                                                <div class="table-responsive">
+                                                    <table class="table widget-26">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="widget-26-job-emp-img">
+                                                                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                                            alt="Company" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-title">
+                                                                        <a href="#">Senior Data Analyst / Scientist</a>
+                                                                        <p class="m-0"><a href="#"
+                                                                                class="employer-name">AxiomUI Inc.</a>
+                                                                            <span class="text-muted time">4 days
+                                                                                ago</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-info">
+                                                                        <p class="type m-0">Part-Time</p>
+                                                                        <p class="text-muted m-0">in <span
+                                                                                class="location">New York, US</span></p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-salary">$ 60/hr</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-category bg-soft-success">
+                                                                        <i class="indicator bg-success"></i>
+                                                                        <span>Artificial Intelligence</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="widget-26-job-starred">
+                                                                        <a href="#">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="feather feather-star">
+                                                                                <polygon
+                                                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                                                                </polygon>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <nav class="d-flex justify-content-center">
+                                    <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
+                                        <li class="page-item">
+                                            <a class="page-link no-border" href="#">
+                                                <span aria-hidden="true">«</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link no-border" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">4</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link no-border" href="#">
+                                                <span aria-hidden="true">»</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section>
+                <h3 class="text-center">
+                    Featured Job's
+                    <small class="text-muted">Recently Added</small>
+                </h3>
+                <div class="d-md-inline-flex row justify-content-center">
+                    <div class="mt-3 col-md-4 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                        <div class=" card shadow-lg border-0 py-2">
+                            <div class="card-header border-0 mb-0">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto col-sm-auto">
+                                        <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                                    </div>
+                                    <div class="col-auto col-sm-auto">
+                                        <div class="row mx-auto pt-2"> <img
+                                                src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png"
+                                                alt="Image result for dollar icon png" width="20" height="20">
+                                            <h5>55/hr</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card-body text-center pb-0 mt-0 pt-3">
+                                <div class="d-block">
+                                    <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small
+                                        class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic
+                                        Coders</small>
+                                </div>
+                                <div class="d-inline-flex row mb-3 ">
+                                    <div class="col-md-auto">
+                                        <ul class="list-inline my-0">
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UI</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UX</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">photoshop</span></li>
+                                            <li class="list-inline-item "> <button
+                                                    class="badge badge-pill badge-primary" type="button">+4</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex row mb-0">
+                                    <div class="col ">
+                                        <p class="text-muted"> We are looking for an experience UI and UX designer
+                                            to work on our projects... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="hl">
+                            </div>
+                            <div class="card-footer border-0 text-center mx-auto ">
+                                <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 col-md-4 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                        <div class=" card shadow-lg border-0 py-2">
+                            <div class="card-header border-0 mb-0">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto col-sm-auto">
+                                        <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                                    </div>
+                                    <div class="col-auto col-sm-auto">
+                                        <div class="row mx-auto pt-2"> <img
+                                                src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png"
+                                                alt="Image result for dollar icon png" width="20" height="20">
+                                            <h5>55/hr</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card-body text-center pb-0 mt-0 pt-3">
+                                <div class="d-block">
+                                    <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small
+                                        class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic
+                                        Coders</small>
+                                </div>
+                                <div class="d-inline-flex row mb-3 ">
+                                    <div class="col-md-auto">
+                                        <ul class="list-inline my-0">
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UI</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UX</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">photoshop</span></li>
+                                            <li class="list-inline-item "> <button
+                                                    class="badge badge-pill badge-primary" type="button">+4</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex row mb-0">
+                                    <div class="col ">
+                                        <p class="text-muted"> We are looking for an experience UI and UX designer
+                                            to work on our projects... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="hl">
+                            </div>
+                            <div class="card-footer border-0 text-center mx-auto ">
+                                <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 col-md-4 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                        <div class=" card shadow-lg border-0 py-2">
+                            <div class="card-header border-0 mb-0">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto col-sm-auto">
+                                        <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                                    </div>
+                                    <div class="col-auto col-sm-auto">
+                                        <div class="row mx-auto pt-2"> <img
+                                                src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png"
+                                                alt="Image result for dollar icon png" width="20" height="20">
+                                            <h5>55/hr</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card-body text-center pb-0 mt-0 pt-3">
+                                <div class="d-block">
+                                    <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small
+                                        class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic
+                                        Coders</small>
+                                </div>
+                                <div class="d-inline-flex row mb-3 ">
+                                    <div class="col-md-auto">
+                                        <ul class="list-inline my-0">
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UI</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UX</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">photoshop</span></li>
+                                            <li class="list-inline-item "> <button
+                                                    class="badge badge-pill badge-primary" type="button">+4</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex row mb-0">
+                                    <div class="col ">
+                                        <p class="text-muted"> We are looking for an experience UI and UX designer
+                                            to work on our projects... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="hl">
+                            </div>
+                            <div class="card-footer border-0 text-center mx-auto ">
+                                <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 col-md-4 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                        <div class=" card shadow-lg border-0 py-2">
+                            <div class="card-header border-0 mb-0">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto col-sm-auto">
+                                        <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                                    </div>
+                                    <div class="col-auto col-sm-auto">
+                                        <div class="row mx-auto pt-2"> <img
+                                                src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png"
+                                                alt="Image result for dollar icon png" width="20" height="20">
+                                            <h5>55/hr</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card-body text-center pb-0 mt-0 pt-3">
+                                <div class="d-block">
+                                    <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small
+                                        class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic
+                                        Coders</small>
+                                </div>
+                                <div class="d-inline-flex row mb-3 ">
+                                    <div class="col-md-auto">
+                                        <ul class="list-inline my-0">
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UI</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">UX</span></li>
+                                            <li class="list-inline-item"> <span
+                                                    class="badge badge-pill badge-outline ">photoshop</span></li>
+                                            <li class="list-inline-item "> <button
+                                                    class="badge badge-pill badge-primary" type="button">+4</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex row mb-0">
+                                    <div class="col ">
+                                        <p class="text-muted"> We are looking for an experience UI and UX designer
+                                            to work on our projects... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="hl">
+                            </div>
+                            <div class="card-footer border-0 text-center mx-auto ">
+                                <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                 <h3 class="text-center mt-3">
+                   Category<br>
+                
+                </h3>
+
+                <div class="mt-3 d-md-inline-flex row justify-content-center">
+                    <div class="mt-3 col-md-4 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                        <div class="card">
+
+                            <div class="view overlay">
+                                <img class="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%28131%29.jpg"
+                                    alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+
+                                <!-- Social shares button -->
+                                <a class="activator waves-effect waves-light mr-4"><i class="fas fa-share-alt"></i></a>
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <hr>
+                                <!-- Text -->
+
+                                <a class="btn btn-primary align-self-end ml-auto" data-toggle="collapse"
+                                    href="#multiCollapseExample1" role="button" aria-expanded="false"
+                                    aria-controls="multiCollapseExample1">Toggle first element</a>
+
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of
+                                        the card's
+                                        content.</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </div>
-    </header>
+
+        <footer class="mainfooter" role="contentinfo">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad">
+                                <h4>Heading 1</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#">Payment Center</a></li>
+                                    <li><a href="#">Contact Directory</a></li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">News and Updates</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad">
+                                <h4>Heading 2</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Website Tutorial</a></li>
+                                    <li><a href="#">Accessibility</a></li>
+                                    <li><a href="#">Disclaimer</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Webmaster</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad">
+                                <h4>Heading 3</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Parks and Recreation</a></li>
+                                    <li><a href="#">Public Works</a></li>
+                                    <li><a href="#">Police Department</a></li>
+                                    <li><a href="#">Fire</a></li>
+                                    <li><a href="#">Mayor and City Council</a></li>
+                                    <li>
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Follow Us</h4>
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 copy">
+                            <p class="text-center">&copy; Copyright 2018 - Company Name. All rights reserved.</p>
+                        </div>
+                    </div>
 
 
-    
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
