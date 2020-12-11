@@ -1,0 +1,68 @@
+<section>
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">add new job</h3>
+                </div>
+                <div class="card-body">
+                <form action="/employer/add-new-job" method="post" >
+                    <div class="form-group">
+                        <label class="small mb-1">Title</label>
+                        <input class="form-control py-4" name="title" id="inputtitle" type="name"
+                            placeholder="job title" />
+                    </div>
+                    <div class="form-group">
+                        <label class="small mb-1">company</label>
+                        <input class="form-control py-4" name="company" id="inputtitle" type="name"
+                            placeholder="company name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="small mb-1">skills required</label>
+                        <input class="form-control py-4" name="skill1" id="inputskill1" type="name"
+                            placeholder="skills" /><br>
+                        <input class="form-control py-4" name="skill2" id="inputskill2" type="name"
+                            placeholder="skills" /><br>
+                        <input class="form-control py-4" name="skill3" id="inputskill3" type="name"
+                            placeholder="skills" />
+                    </div>
+                    <div class="form-group">
+                        <label class="small mb-1">Job description</label>
+                        <input class="form-control py-4" name="jobdetails" id="job" type="name"
+                            placeholder="job details" />
+                    </div>
+
+                    <!-- Default inline 1-->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" name="hourly" id="defaultInline1">
+                        <label class="custom-control-label" for="defaultInline1">hourly</label>
+                    </div>
+
+                    <!-- Default inline 2-->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" name="daily" id="defaultInline2">
+                        <label class="custom-control-label" for="defaultInline2">Daily </label>
+                    </div>
+
+                    <!-- Default inline 3-->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" name="monthly" id="defaultInline3">
+                        <label class="custom-control-label" for="defaultInline3">monthly</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small mb-1">Salary  <i class="fa fa-inr" width="60" height="60"></i></label>
+                        <input type="number" name="salary" class="form-control" id="salary" placeholder=" salary">
+
+                    </div>
+                    <button type="submit" class="btn btn-success float-right">Submit</button>
+                </form>
+                </div>
+                 <br>
+                <div class="card-footer text-center">
+                    <div class="small"><a href="#">back to dashboard</a></div>
+                </div>
+
+            </div>
+        </div>
+</section>

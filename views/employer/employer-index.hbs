@@ -1,0 +1,87 @@
+<section>
+
+    <div class="mt-4">
+        <h3 class="text-center font-weight-bolder">Your Job's
+            <a class="btn btn-success btn-lg float-right text-light" href="/employer/add-new-job">Add new jobs</a></h3>
+    </div>
+    <br>
+</section>
+
+
+
+<section>
+    <div class="row">
+        {{#each jobs}}
+        <div class="d-inline-flex justify-content-center pl-4 pr-4">
+            <div class="mt-3 d-flex align-items-stretch">
+                <div class="card shadow-lg border-0 py-2">
+                    <div class="card-header border-0 mb-0">
+                        <div class="row justify-content-between">
+                            <div class="col-auto col-sm-auto">
+                                {{#if this.hourly}}
+                                <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                                {{else}}
+                                {{#if this.daily}}
+                                <h4> <span class="badge badge-pill badge-success">daily</span></h4>
+                                {{else}}
+                                {{#if this.monthly}}
+                                <h4> <span class="badge badge-pill badge-success">daily</span></h4>
+                                {{/if}}
+                                {{/if}}
+                                {{/if}}
+
+                            </div>
+                            <div class="col-auto col-sm-auto">
+                                <div class="row mx-auto pt-2"> <i class="fa fa-inr" width="40" height="40"></i>
+                                    <h5>{{this.salary}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" card-body text-center pb-0 mt-0 pt-3">
+
+                        <div class="d-block">
+                            <h5 class="card-title mb-0 font-weight-bold">{{this.title}}</h5>
+                            <small class="text-info my-1"> <i
+                                    class="fa fa-file-code-o small"></i>{{this.company}}</small>
+                        </div>
+                        <div class="d-inline-flex row mb-3 ">
+                            <div class="col-md-auto">
+                                <ul class="list-inline my-0">
+                                    <li class="list-inline-item"> <span
+                                            class="badge badge-pill badge-outline ">{{this.skill1}}</span></li>
+                                    <li class="list-inline-item"> <span
+                                            class="badge badge-pill badge-outline ">{{this.skill2}}</span></li>
+                                    <li class="list-inline-item"> <span
+                                            class="badge badge-pill badge-outline ">{{this.skill3}}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="d-flex row mb-0">
+                            <div class="col ">
+                                <p class="text-muted"> {{this.jobdetails}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <hr class="hl">
+                    </div>
+                    <div class="card-footer border-0 text-center mx-auto ">
+                        <div class="footer">
+                            <button type="button" class="btn btn-warning">edit</button>
+                            <button type="button" class="btn btn-danger">delete</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+
+
+    <div class="w-100"></div>
+</section>
